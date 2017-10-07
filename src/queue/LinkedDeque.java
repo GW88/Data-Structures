@@ -414,7 +414,7 @@ public class LinkedDeque<E> implements MyDeque<E> {
     }
 
     /**
-     * stack method push es methodia dsamushavebeli
+     *
      * @param value
      */
     @Override
@@ -471,6 +471,13 @@ public class LinkedDeque<E> implements MyDeque<E> {
         }
         return elem;
     }
+
+    /**
+     * adds all element to another structure, if root is empty if statement works if not else side will
+     * do her job. MyDeque can be replaced with Collection or with any atehr interface, custom or standart from
+     * packages.
+     * @param values
+     */
     public void addAll(MyDeque<? extends E> values){
         Object[] elements = ((LinkedDeque<E>) values).toArray();
         int newSize = elements.length;
