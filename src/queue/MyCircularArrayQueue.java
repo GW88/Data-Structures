@@ -31,6 +31,9 @@ public class MyCircularArrayQueue<E> implements MyQueue<E> {
      */
     @Override
     public boolean add(E value) {
+        if (value == null){
+            throw new NullPointerException();
+        }
         boolean bo;
         if (size == data.length){
             bo = false;
@@ -53,6 +56,9 @@ public class MyCircularArrayQueue<E> implements MyQueue<E> {
      */
     @Override
     public boolean offer(E value) {
+        if (value == null){
+            return false;
+        }
         boolean bo;
         if (size == data.length){
             bo = false;
