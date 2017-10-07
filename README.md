@@ -7,6 +7,7 @@ few things have to be deleted.
 things you will meet at Queue  Implementation From scratch.
 
 Queue  (Node Based, Circular Array Based) Circular Array Based Queue has fixed size. 
+
 Deque (Array & Node Based) both resize automatically. 
 
 upcoming: PriorityQueue will be added after Tree Directory appears in My Repositories. for that reason it has been postponed. 
