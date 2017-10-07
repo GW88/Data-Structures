@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 
 /**
  *Queue implementation based on node. class has 3 basic queue method.
+ *
  */
 public class MyLinkedQueue<E> implements MyQueue<E> {
 
@@ -53,8 +54,12 @@ public class MyLinkedQueue<E> implements MyQueue<E> {
     private QueueNode<E> tail;
     private int size;
 
+
     @Override
     public boolean add(E value) {
+        if (value == null){
+            throw new NullPointerException();
+        }
         QueueNode<E> queueNode = new QueueNode<>(value, null);
         if (root == null || tail == null){
             root = queueNode;
@@ -71,6 +76,9 @@ public class MyLinkedQueue<E> implements MyQueue<E> {
 
     @Override
     public boolean offer(E value) {
+        if (value == null){
+            return false;
+        }
         add(value);
         return true;
     }
